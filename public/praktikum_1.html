@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Bukalapak
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<style>
+    *,::after,::before{
+        box-sizing: inherit;
+    }
+    html{
+        font-size: 16px;
+        text-rendering: optimizeLegibility;
+        text-size-adjust: 100%;
+        line-height: 1.15;
+        font-weight: 400;
+        background-color: #f5f5f5;
+        color: #333;
+        min-height: 100%;
+    }
+
+    div{
+        display: block;
+    }
+
+    body{
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    /*container menu*/
+    .mt-48{
+        margin-top: 48px!important;
+    }
+
+    .bl-section{
+        padding: 0;
+        display: block;
+    }
+
+    @media only screen and (min-width: 64cm){
+        .bl-container{
+            width: 984px;
+        }        
+    }
+    .bl-container{
+        width: 984px;
+        margin: 0 auto;
+        position: relative;
+        max-width: 1300px;
+        padding: 0 12px;
+    }
+
+    .bl0-menu-container{
+        width: 960px;
+    }
+
+    .bl-menu-container__head{
+        position: relative;
+        padding-top: 24px;
+        border-radius: 8px;
+        background: #fff;
+    }
+    
+    .bl-menu-container__head-content{
+        margin-top: -16px;
+    }
+
+    /*grid menu*/
+    .bl-menu-container__grid-wrapper{
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .mb-0{
+        margin-bottom: 0!important;
+    }
+    .bl-flex-container{
+        display: flex;
+    }
+    .bl-menu-container__grid-item{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .mb-16{
+        margin-bottom: 16px!important;
+    }
+    .mt-16{
+        margin-top: 16px!important;
+    }
+    /*item*/
+    .bl-menu-item{
+        display: block;
+    }
+    a, a:focus, a:hover{
+        text-decoration: none;
+    }
+    a{
+        font-weight: 400px;
+        color:#d71149;
+        cursor: pointer;
+    }
+    .bl-menu-item__body{
+        width: 56px;
+        height: 56px;
+        margin-bottom: 24px;
+    }
+    .bl-menu-item__body img{
+        width: 100%;
+        height: auto;
+    }
+    /*footer menu*/
+    .bl-menu-item__footer{
+        text-align: center;
+    }
+    .bl-text--body-default.bl-text--ellipsis__2{
+        max-height: 48px;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+    }
+    .bl-text--body-default{
+        font-size: 16px;
+        line-height: 1.25;
+    }
+    .bl-text--semi-bold{
+        font-weight: 600;
+    }
+    .bl-text{
+        font-family: 'Hind Madurai',sans-serif;
+        color: #141414;
+        margin: 0;
+    }
+    p{
+        margin: 0;
+        padding:0;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+    .bl-menu-container__menu-trigger-body{
+        margin: 0 auto 24px;
+    }
+    .bl-menu-container__menu-trigger-content{
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background: #f2f4f5;
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 16px;
+        border-radius: 22px;
+    }
+    /*section promo*/
+    .bl-flex-container.is-gutter-20{
+        margin-top: -10px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .bl-flex-container{
+        display: flex;
+    }
+    .bl-flex-container.is-gutter-20:last-child{
+        margin-bottom: -10px;
+    }
+    .bl-flex-container.is-gutter-20>.bl-flex-item{
+        padding: 10px;
+    }
+    /*item promo*/
+    .bl-img-grp__head, .bl-img-grp__wrapper{
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .bl-img-grp__body{
+        text-align: center;
+        margin-top: 24px;
+    }
+    .bl-img-grp__img{
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
+    .bl-text--subheading-3.bl-text--ellipsis__2{
+        max-height: 54px;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+    }
+    .bl-text--subheading-3{
+        font-size: 18px;
+        line-height: 1.3333;
+    }
+
+</style>
+
+<body>
+    <!--div tiga section: menu, promo, banner-->
+    <div id="home-section" class="bg-white">
+        <!--section menu-->
+        <section class="bl-section menu-section mt-48">
+            <div class="bl-container">
+                <div class="bl0-menu-container bl-menu-container">
+                    <div class="bl-menu-container__head">
+                        <div class="bl-menu-container__head-content" style="padding: 0px;">
+                            <!--grid item-->
+                            <div class="bl-flex-container mb-0 bl-menu-container__grid-wrapper" style="flex: 0 1 100%;">
+                                <!--container item 1-->
+                                <div class="bl-flex-item mt-16 mb-16 bl-menu-container__grid-item" style="flex: 0 1 100%;">
+                                    <a href="https://www.bukalapak.com/super-seller?referrer=recommendation&from=homepage-menu-1" class="bl-menu-item bl-menu-item--medium">
+                                        <!--gambar item 1-->
+                                        <div class="bl-menu-item__body">
+                                            <img src="https://s4.bukalapak.com/athena/1606361301726/original/hp_menu_icon_6ff40e16-7e1b-4fb2-881f-0ac9c4cc1113.jpg" alt="superseller">
+                                        </div>
+                                        <!--keterangan/footer item 1-->
+                                        <div class="bl-menu-item__footer">
+                                            <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
+                                                Super Seller
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--container item 2-->
+                                <div class="bl-flex-item mt-16 mb-16 bl-menu-container__grid-item" style="flex: 0 1 100%;">
+                                    <a href="https://www.bukalapak.com/bukaemas?referrer=recommendation&from=homepage-menu-2" class="bl-menu-item bl-menu-item--medium">
+                                        <!--gambar item 2-->
+                                        <div class="bl-menu-item__body">
+                                            <img src="https://s3.bukalapak.com/dope/1581554929544/original/hp_menu_icon_c74c441a-fa86-42d8-b7ea-3420cde532ec.jpg" alt="superseller">
+                                        </div>
+                                        <!--keterangan item 2-->
+                                        <div class="bl-menu-item__footer">
+                                            <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
+                                                BukaEmas
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--container item 3-->
+                                <div class="bl-flex-item mt-16 mb-16 bl-menu-container__grid-item" style="flex: 0 1 100%;">
+                                    <a href="https://m.bukalapak.com/promo-campaign/bazar-diskon-heboh?referrer=recommendation&from=homepage-menu-3" class="bl-menu-item bl-menu-item--medium">
+                                        <!--gambar item 3-->
+                                        <div class="bl-menu-item__body">
+                                            <img src="https://s4.bukalapak.com/athena/1593141004812/original/hp_menu_icon_fb9007d5-ca33-47bf-b384-6e325fbd6bef.jpg" alt="superseller">
+                                        </div>
+                                        <!--keterangan item 3-->
+                                        <div class="bl-menu-item__footer">
+                                            <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
+                                                 Bazar s.d 90%
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--container item 4-->
+                                <div class="bl-flex-item mt-16 mb-16 bl-menu-container__grid-item" style="flex: 0 1 100%;">
+                                    <a href="https://www.bukalapak.com/pulsa?referrer=recommendation&from=homepage-menu-4" class="bl-menu-item bl-menu-item--medium">
+                                        <!--gambar item 4-->
+                                        <div class="bl-menu-item__body">
+                                            <img src="https://s2.bukalapak.com/dope/1581555601589/original/hp_menu_icon_f28ec829-40fd-4dbd-9ef3-7d491cfc3e5a.jpg" alt="superseller">
+                                        </div>
+                                        <!--keterangan item 4-->
+                                        <div class="bl-menu-item__footer">
+                                            <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
+                                                Pulsa Prabayar
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--container item 5-->
+                                <div class="bl-flex-item mt-16 mb-16 bl-menu-container__grid-item" style="flex: 0 1 100%;">
+                                    <a href="https://www.bukalapak.com/paket-data?referrer=recommendation&from=homepage-menu-5" class="bl-menu-item bl-menu-item--medium">
+                                        <!--gambar item 5-->
+                                        <div class="bl-menu-item__body">
+                                            <img src="https://s2.bukalapak.com/dope/1581555577452/original/hp_menu_icon_82b331ed-a7b4-4959-9cbc-9df5a94c5e9a.jpg" alt="superseller">
+                                        </div>
+                                        <!--keterangan item 5-->
+                                        <div class="bl-menu-item__footer">
+                                            <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
+                                                Paket Data
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--container item 6-->
+                                <div class="bl-flex-item mt-16 mb-16 bl-menu-container__grid-item" style="flex: 0 1 100%;">
+                                    <a href="https://www.bukalapak.com/voucher-game?referrer=recommendation&from=homepage-menu-6" class="bl-menu-item bl-menu-item--medium">
+                                        <!--gambar item 6-->
+                                        <div class="bl-menu-item__body">
+                                            <img src="https://s2.bukalapak.com/dope/1581555568239/original/hp_menu_icon_b3f21cd5-db80-468e-8209-db5fdfa6a694.jpg" alt="superseller">
+                                        </div>
+                                        <!--keterangan item 6-->
+                                        <div class="bl-menu-item__footer">
+                                            <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
+                                                Voucher Game
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--container item 7-->
+                                <div class="bl-flex-item mt-16 mb-16 bl-menu-container__grid-item" style="flex: 0 1 100%;">
+                                    <a href="https://www.bukalapak.com/listrik-pln/token-listrik?referrer=recommendation&from=homepage-menu-7" class="bl-menu-item bl-menu-item--medium">
+                                        <!--gambar item 7-->
+                                        <div class="bl-menu-item__body">
+                                            <img src="https://s0.bukalapak.com/dope/1581555557556/original/hp_menu_icon_bf558f5e-17c0-4e49-a0a0-5aa55801fba0.jpg" alt="superseller">
+                                        </div>
+                                        <!--keterangan item 7-->
+                                        <div class="bl-menu-item__footer">
+                                            <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
+                                                Token Listrik
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--container item 8-->
+                                <div class="bl-flex-item mt-16 mb-16 bl-menu-container__grid-item" style="flex: 0 1 100%;">
+                                    <a href="https://bukalapak.com/kartu-prakerja?source=dope&referrer=recommendation&from=homepage-menu-8" class="bl-menu-item bl-menu-item--medium">
+                                        <!--gambar item 7-->
+                                        <div class="bl-menu-item__body">
+                                            <img src="https://s4.bukalapak.com/athena/1587561193329/original/hp_menu_icon_6777cc70-663f-47f0-8431-a8c78fcebe68.jpg" alt="superseller">
+                                        </div>
+                                        <!--keterangan item 7-->
+                                        <div class="bl-menu-item__footer">
+                                            <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
+                                                Kartu Prakerja
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--container item 9 / semua menu-->
+                                <div class="bl-flex-item mt-16 mb-16 bl-menu-container__grid-item" style="flex: 0 1 100%; cursor: pointer;">
+                                    <div class="bl-menu-container__menu-trigger">
+                                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#windowNama">
+                                            <div class="bl-menu-container__menu-trigger-body">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="th-large" class="svg-inline--fa fa-th-large fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; height: 24px;"><path fill="currentColor" d="M296 32h192c13.255 0 24 10.745 24 24v160c0 13.255-10.745 24-24 24H296c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24zm-80 0H24C10.745 32 0 42.745 0 56v160c0 13.255 10.745 24 24 24h192c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24zM0 296v160c0 13.255 10.745 24 24 24h192c13.255 0 24-10.745 24-24V296c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm296 184h192c13.255 0 24-10.745 24-24V296c0-13.255-10.745-24-24-24H296c-13.255 0-24 10.745-24 24v160c0 13.255 10.745 24 24 24z"></path></svg>
+                                            </div>
+                                            <div class="bl-menu-container__menu-trigger-footer">
+                                                <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
+                                                    Semua Menu
+                                                </p>
+                                            </div>
+                                        </button>
+                                        
+                                        <!-- The Modal -->
+                                        <div class="modal" id="windowNama">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+  
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                         <h4 class="modal-title">Praktikum 1 PWeb D</h4>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                     </div>
+  
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <p>Nama: Aliyya Zahra Nurulhusna<br>
+                                                        NRP: 5026201091</p>
+                                                    </div>
+  
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section promo-->
+        <section class="bl-section promo-section mt-48">
+            <div class="bl-container">
+                <div class="bl-container-img-group-promo">
+                    <!--container flex-->
+                    <div class="bl-flex-container is-gutter-20">
+                        <!--container promo 1-->
+                        <div class="bl-flex-item bl-img-grp-item" style="flex: 0 1 100%; max-width:16.66%">
+                            <a href="https://www.bukalapak.com/promo-campaign/diskon-ppkm?from=brand-homepage-1" target class="bl-img-grp-wrapper">
+                                <!--foto promo 1-->
+                                <div class="bl-img-grp__head">
+                                    <img src="https://s4.bukalapak.com/rev-banner/flash_banner/860652341/s-264-264/mobile_DiskonPPKM_eced8f68-b4b1-4dd8-b51d-12627e22a4dc.jpeg" alt="Diskon PPKM" class="bl-img-grp__img">
+                                </div>
+                                <!--keterangan promo 1-->
+                                <div class="bl-img-grp__body">
+                                    <p class="bl-text bl-text--subheading-3 bl-text-ellipsis__2"> Diskon PPKM </p>
+                                </div>
+                            </a>
+                        </div>
+                        <!--container promo 2-->
+                        <div class="bl-flex-item bl-img-grp-item" style="flex: 0 1 100%; max-width:16.66%">
+                            <a href="https://www.bukalapak.com/promo-campaign/murah-mantap-september?from=brand-homepage-2" target class="bl-img-grp-wrapper">
+                                <!--foto promo 2-->
+                                <div class="bl-img-grp__head">
+                                    <img src="https://s4.bukalapak.com/rev-banner/flash_banner/585356984/s-264-264/mobile_MurahMantap_8bbb144e-9121-4802-9fcf-9a60f44add3c.jpeg" alt="Murah Mantap" class="bl-img-grp__img">
+                                </div>
+                                <!--keterangan promo 2-->
+                                <div class="bl-img-grp__body">
+                                    <p class="bl-text bl-text--subheading-3 bl-text-ellipsis__2"> Murah Mantap </p>
+                                </div>
+                            </a>
+                        </div>
+                        <!--container promo 3-->
+                        <div class="bl-flex-item bl-img-grp-item" style="flex: 0 1 100%; max-width:16.66%">
+                            <a href="https://www.bukalapak.com/promo-campaign/elektrophone-sale-september?from=brand-homepage-3" target class="bl-img-grp-wrapper">
+                                <!--foto promo 3-->
+                                <div class="bl-img-grp__head">
+                                    <img src="https://s4.bukalapak.com/rev-banner/flash_banner/958633355/s-264-264/mobile_ElektrophoneSale_cf1b3137-cb11-4190-870b-6ade5803dac8.jpeg" alt="Elektrophone Sale" class="bl-img-grp__img">
+                                </div>
+                                <!--keterangan promo 3-->
+                                <div class="bl-img-grp__body">
+                                    <p class="bl-text bl-text--subheading-3 bl-text-ellipsis__2"> Elektrophone Sale </p>
+                                </div>
+                            </a>
+                        </div>
+                        <!--container promo 4-->
+                        <div class="bl-flex-item bl-img-grp-item" style="flex: 0 1 100%; max-width:16.66%">
+                            <a href="https://www.bukalapak.com/promo-campaign/fashion-festival-september?from=brand-homepage-4" target class="bl-img-grp-wrapper">
+                                <!--foto promo 4-->
+                                <div class="bl-img-grp__head">
+                                    <img src="https://s4.bukalapak.com/rev-banner/flash_banner/348980120/s-264-264/mobile_FashionFestival_8f211f94-700a-480b-9e08-1ffaafcdee6a.jpeg" alt="Fashion Festival" class="bl-img-grp__img">
+                                </div>
+                                <!--keterangan promo 4-->
+                                <div class="bl-img-grp__body">
+                                    <p class="bl-text bl-text--subheading-3 bl-text-ellipsis__2"> Fashion Festival </p>
+                                </div>
+                            </a>
+                        </div>
+                        <!--container promo 5-->
+                        <div class="bl-flex-item bl-img-grp-item" style="flex: 0 1 100%; max-width:16.66%">
+                            <a href="https://www.bukalapak.com/promo-campaign/jagoan-gaming?referrer=promo-hari-ini&from=brand-homepage-5" target class="bl-img-grp-wrapper">
+                                <!--foto promo 5-->
+                                <div class="bl-img-grp__head">
+                                    <img src="https://s4.bukalapak.com/rev-banner/flash_banner/332663128/s-264-264/mobile_JagoanGaming_98881e51-2ebf-4baf-9c91-b23e14882eab.jpeg" alt="Jagoan Gaming" class="bl-img-grp__img">
+                                </div>
+                                <!--keterangan promo 5-->
+                                <div class="bl-img-grp__body">
+                                    <p class="bl-text bl-text--subheading-3 bl-text-ellipsis__2"> Jagoan Gaming </p>
+                                </div>
+                            </a>
+                        </div>
+                        <!--container promo 6-->
+                        <div class="bl-flex-item bl-img-grp-item" style="flex: 0 1 100%; max-width:16.66%">
+                            <a href="https://www.bukalapak.com/promo-campaign/flash-diskon?from=brand-homepage-6" target class="bl-img-grp-wrapper">
+                                <!--foto promo 6-->
+                                <div class="bl-img-grp__head">
+                                    <img src="https://s4.bukalapak.com/rev-banner/flash_banner/158940117/s-264-264/mobile_FlashDiskon_51c681a8-254b-4bb4-8b63-3808b5987a05.jpeg" alt="Flash Diskon" class="bl-img-grp__img">
+                                </div>
+                                <!--keterangan promo 6-->
+                                <div class="bl-img-grp__body">
+                                    <p class="bl-text bl-text--subheading-3 bl-text-ellipsis__2"> Flash Diskon </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section banner-->
+        <section class="bl-section banner mt-48">
+            <div class="bl-container">
+                <a href="https://www.bukalapak.com/promo-campaign/zona-pengguna-baru">
+                    <!--image banner-->
+                    <picture>
+                        <img src="https://s0.bukalapak.com/athena/new-zone/s-2180-280/nuz_dweb.jpeg.webp" alt="banner zona pengguna baru" style="width: 100%;">
+                    </picture>
+                </a>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

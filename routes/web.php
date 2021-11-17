@@ -28,3 +28,8 @@ Route::get('ets2021',"ViewController@showETS") ;
 
 Route::get('greetings',"ViewController@showGreetings") ;
 Route::post('sayhi',"ViewController@sayHi") ;
+
+//route CRUD
+Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::post('/pegawai/store','PegawaiController@store');

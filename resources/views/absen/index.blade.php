@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Query Builder PWeb D</title>
-</head>
-<body>
+@extends('layout.happy')
+@section('title','Data Absensi Pegawai')
+@section('konten')
 
-	<h2>Query Builder PWeb Kelas D</h2>
-    <h5>Aliyya Zahra Nurulhusna | 5026201091</h5><br>
-	<h4>Data Absen</h4>
+@section('judulhalaman', 'Data Absensi Pegawai')
 
-	<a href="/absen/tambah"> + Tambah Absen Baru</a>
+	<a href="/absen/tambah" class = "btn btn-primary"> + Tambah Absen Baru</a>
 
 	<br/>
 	<br/>
 
-	<table border="1">
-		<tr>
+	<table class="table table-light table-bordered">
+		<tr class="table table-light table-bordered">
 			<th>ID</th>
 			<th>ID Pegawai</th>
 			<th>Tanggal</th>
@@ -36,7 +31,4 @@
 		</tr>
 		@endforeach
 	</table>
-
-
-</body>
-</html>
+@endsection

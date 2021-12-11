@@ -54,10 +54,7 @@
                             <a class="nav-link btn btn-block" href="/absen">Absen</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-block" href="#">Tugas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-block" href="#">Praktikum</a>
+                            <a class="nav-link btn btn-block" href="/praktikum">Praktikum</a>
                         </li>
                     </ul>
                 </div>

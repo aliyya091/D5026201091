@@ -29,13 +29,14 @@ Route::get('ets2021',"ViewController@showETS") ;
 Route::get('greetings',"ViewController@showGreetings") ;
 Route::post('sayhi',"ViewController@sayHi") ;
 
-//route CRUD
+//route CRUD pegawai
 Route::get('/pegawai','PegawaiController@index');
 Route::get('/pegawai/tambah','PegawaiController@tambah');
 Route::post('/pegawai/store','PegawaiController@store');
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+Route::get('/pegawai/cari','PegawaiController@cari');
 
 //route week 13
 Route::get('/absen','AbsenController@index');
@@ -44,3 +45,12 @@ Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
+
+//route praktikum
+Route::get('/praktikum','PraktikumController@index');
+Route::get('/praktikum/tambah','PraktikumController@tambah');
+Route::post('/praktikum/store','PraktikumController@store');
+Route::get('/praktikum/edit/{id}','PraktikumController@edit');
+Route::post('/praktikum/update','PraktikumController@update');
+Route::get('/praktikum/hapus/{id}','PraktikumController@hapus');
+Route::get('/praktikum/cari','PraktikumController@cari');

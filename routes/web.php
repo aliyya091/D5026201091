@@ -54,3 +54,9 @@ Route::get('/praktikum/edit/{id}','PraktikumController@edit');
 Route::post('/praktikum/update','PraktikumController@update');
 Route::get('/praktikum/hapus/{id}','PraktikumController@hapus');
 Route::get('/praktikum/cari','PraktikumController@cari');
+
+//route EAS Kode E5
+//route praktikum
+Route::get('/nilaikuliah','NilaiKuliahController@index');
+Route::get('/nilaikuliah/tambah','NilaiKuliahController@tambah');
+Route::post('/nilaikuliah/store','NilaiKuliahController@store');

@@ -56,6 +56,9 @@
                         <li class="nav-item">
                             <a class="nav-link btn btn-block" href="/praktikum">Praktikum</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-block" href="/nilaikuliah">EAS Nilai Kuliah<br> Kode E5</a>
+                        </li>
                     </ul>
                 </div>
 
